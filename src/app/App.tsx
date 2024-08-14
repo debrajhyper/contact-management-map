@@ -5,10 +5,10 @@ import { Layout, NotFound } from "@View";
 import { GRAPH_PATH, HOME_PATH, NOT_FOUND_PATH } from "@Routes";
 
 // Using lazy loading to import the contact page component from the "@View/ContactPage" module
-const ContactPage = lazy(() => import('@View/ContactPage').then((module) => ({ default: module['ContactPage'] })));
+const ContactPage = lazy(() => import('@View/ContactPage'));
 
 // Using lazy loading to import the graph page component from the "@View/GraphPage" module
-const GraphPage = lazy(() => import('@View/GraphPage').then((module) => ({ default: module['GraphPage'] })));
+const GraphPage = lazy(() => import('@View/GraphPage'));
 
 /**
  * The main App component that sets up the routing for the application.

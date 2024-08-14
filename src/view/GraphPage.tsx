@@ -14,7 +14,7 @@ const MapView = lazy(() => import('@Components/Graph/MapView').then((module) => 
  * The default view is the chart view.
  * The user can switch between chart and map view by clicking on the corresponding button.
  */
-export function GraphPage() {
+export default function GraphPage() {
     // Define the state variable 'graphView' to keep track of the current graph view
     const [graphView, setGraphView] = useState<string>(GRAPH_VIEW_CHART_TYPE);
 
