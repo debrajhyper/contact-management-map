@@ -1,10 +1,31 @@
 import { useQuery } from "react-query";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
-import { LatLngExpression } from "leaflet";
+import L, { LatLngExpression } from "leaflet";
 import { GET_COUNTRY_DATA_API } from "@Api";
 import { Loader, Error } from "@Components";
 import { GET_COUNTRY_DATA } from "@Constants";
+import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
+import markerIcon from "leaflet/dist/images/marker-icon.png";
+import markerShadow from "leaflet/dist/images/marker-shadow.png";
+
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
+delete L.Icon.Default.prototype._getIconUrl;
+L.Icon.Default.mergeOptions({
+    iconUrl: markerIcon,
+    iconRetinaUrl: markerIcon2x,
+    shadowUrl: markerShadow,
+});
+
+function MapPlaceholder() {
+    return (
+        <p>
+            Global map.{' '}
+            <noscript>You need to enable JavaScript to see this map.</noscript>
+        </p>
+    )
+}
 
 const MyMarkers = ({ data }: CountryDataProps) => {
     const points: PointsDataProps[] = [];
@@ -55,6 +76,7 @@ export function MapView() {
                 center={center}
                 zoom={4.4}
                 scrollWheelZoom={true}
+                placeholder={<MapPlaceholder />}
                 style={{ width: "100%", height: "70dvh", borderRadius: "10px" }}
             >
                 <TileLayer
