@@ -1,4 +1,4 @@
-# 📞 Contact Management Map
+# Contact Management Map
 
     A React application for managing contacts and visualizing COVID-19 data on an interactive map.
 
