@@ -10,7 +10,7 @@ import { CONTACT_STATUS_ACTIVE, EMPTY_STR, MODAL_TYPE_ADD, MODAL_TYPE_EDIT, MODA
  * ContactPage component that displays a list of contacts and a button to create a new contact.
  * It also displays a modal to add, edit, or view contact details.
  */
-export default function ContactPage() {
+export function ContactPage() {
     // get the open state of the modal from the Redux store
     const { isOpen } = useSelector((state: InitialState) => state.modal);
     // get the list of contacts from the Redux store
