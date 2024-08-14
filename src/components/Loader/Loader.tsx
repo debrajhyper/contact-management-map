@@ -1,0 +1,33 @@
+import './style.css';
+
+export function Loader() {
+    return (
+        <div className='h-full w-full flex justify-center items-center overflow-hidden'>
+            <svg
+                className="container -mt-40"
+                viewBox="0 0 40 40"
+                height="40"
+                width="40"
+            >
+                <circle
+                    className="track"
+                    cx="20"
+                    cy="20"
+                    r="17.5"
+                    pathLength="100"
+                    strokeWidth="5px"
+                    fill="none"
+                />
+                <circle
+                    className="car"
+                    cx="20"
+                    cy="20"
+                    r="17.5"
+                    pathLength="100"
+                    strokeWidth="5px"
+                    fill="none"
+                />
+            </svg>
+        </div>
+    )
+}

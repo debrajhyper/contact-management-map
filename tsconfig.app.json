@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    "baseUrl": ".",
+    "paths": {
+      "@Api": ["src/api/index"],
+      "@Api/*": ["src/api/*"],
+      "@App": ["src/app/App"],
+      "@App/*": ["src/app/*"],
+      "@Components": ["src/components/index"],
+      "@Components/*": ["src/components/*"],
+      "@Constants": ["src/constants/index"],
+      "@Constants/*": ["src/constants/*"],
+      "@Routes": ["src/routes/index"],
+      "@Routes/*": ["src/routes/*"],
+      "@Services": ["src/services/index"],
+      "@Services/*": ["src/services/*"],
+      "@Utils": ["src/utils/index"],
+      "@Utils/*": ["src/utils/*"],
+      "@View": ["src/view/index"],
+      "@View/*": ["src/view/*"],
+    },
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["src"]
+}

@@ -1,0 +1,19 @@
+export type EMPTY_STR = '';
+export type MODAL_TYPE_ADD = 'add';
+export type MODAL_TYPE_EDIT = 'edit';
+export type MODAL_TYPE_VIEW = 'view';
+export type CONTACT_STATUS_ACTIVE = 'active';
+export type CONTACT_STATUS_INACTIVE = 'inactive';
+
+export const EMPTY_STR: EMPTY_STR = '';
+export const MODAL_SLICE_NAME = 'modal';
+export const GRAPH_VIEW_MAP_TYPE = 'map';
+export const GRAPH_VIEW_CHART_TYPE = 'chart';
+export const CONTACTS_SLICE_NAME = 'contacts';
+export const MODAL_TYPE_ADD: MODAL_TYPE_ADD = 'add';
+export const MODAL_TYPE_EDIT: MODAL_TYPE_EDIT = 'edit';
+export const MODAL_TYPE_VIEW: MODAL_TYPE_VIEW = 'view';
+export const CONTACT_STATUS_ACTIVE: CONTACT_STATUS_ACTIVE = 'active';
+export const CONTACT_STATUS_INACTIVE: CONTACT_STATUS_INACTIVE = 'inactive';
+export const GET_COUNTRY_DATA = 'getCountryData';
+export const GET_HISTORICAL_DATA = 'getHistoricalData';
