@@ -1,50 +1,137 @@
-# React + TypeScript + Vite
+# 📞 Contact Management Map
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+    A React application for managing contacts and visualizing COVID-19 data on an interactive map.
 
-Currently, two official plugins are available:
+  🌐 Website: [Live link](https://contact-management-map.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 😍 UI
 
-## Expanding the ESLint configuration
+<p align="center">
+  <img src="./thumbnail/image1.png" width="410"/>
+  <img src="./thumbnail/image2.png" width="410"/>
+  <img src="./thumbnail/image3.png"width="410"/>
+  <img src="./thumbnail/image4.png"width="410"/>
+  <img src="./thumbnail/image5.png" width="410"/>
+  <img src="./thumbnail/image6.png" width="410"/>
+  <img src="./thumbnail/image7.png"width="410"/>
+  <img src="./thumbnail/image8.png"width="410"/>
+</p>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🤌🏻 Overview
 
-- Configure the top-level `parserOptions` property like this:
+The Contact Management Map is a modern, responsive React application that allows users to manage contacts efficiently and visualize COVID-19 data on a map. Built with cutting-edge technologies such as React, TypeScript, and Vite, the app ensures a fast and efficient development experience while providing a seamless user experience across different devices.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🎉 Features
+
+- **Contact Management**: Perform CRUD (Create, Read, Update, Delete) operations on contacts. Each contact includes fields like first name, last name, and status.
+- **COVID-19 Data Visualization**: Display COVID-19 data on an interactive map using Leaflet and present detailed graphs using ApexCharts.
+- **Responsive Design**: Optimized for both desktop and mobile devices, ensuring a consistent and user-friendly experience.
+- **Data Validation**: Integrated validation mechanisms to ensure the accuracy and consistency of user inputs.
+- **Error Handling**: Robust error handling to manage unexpected errors gracefully, enhancing the overall user experience.
+
+## 🕹️ Technologies Used
+
+- **React**: JavaScript library for building user interfaces.
+- **TypeScript**: Superset of JavaScript that adds optional static typing.
+- **Vite**: Fast development server and build tool.
+- **React Router**: Client-side routing library for React.
+- **React Query**: Data fetching and caching library for React.
+- **Redux Toolkit**: State management tool.
+- **Leaflet**: Library for interactive maps.
+- **ApexCharts**: Modern charting library.
+- **Tailwind CSS**: Utility-first CSS framework.
+  
+## 🪄 Getting Started
+
+### ☝🏻 Prerequisites
+
+Before you start, ensure you have the following installed:
+
+- **Node.js** (version 14 or higher)
+- **npm** (version 6 or higher) or **yarn** (version 1 or higher)
+- A code editor or IDE of your choice
+
+### ⏩ Installation
+
+Follow these steps to set up the project locally:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/debrajhyper/contact-management-map.git
+   cd contact-management-map
+   ```
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+3. **Start the development server:**
+   ```bash
+   npx vite --port=4000
+   ```
+4. **Open the application in your web browser:**
+   ```
+   http://localhost:4000
+   ```
+
+### 📦 Build and Deployment
+
+To build the application for production, run:
+
+```bash
+npm run build
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+The production-ready build will be generated in the `dist` folder.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+To deploy the application, you can use a hosting platform of your choice, such as **Vercel**, **Netlify**, or **AWS**.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+## 🎄 Project Structure
+
+The project follows a modular structure to ensure scalability and maintainability:
+
+```bash
+src
+├── api
+│   └── index.ts
+├── app
+│   └── App.tsx
+├── components
+│   ├── Card
+│   │   └── Card.tsx
+│   ├── Error
+│   │   └── Error.tsx
+│   ├── Graph
+│   │   ├── ChartView.tsx
+│   │   └── MapView.tsx
+│   ├── Input
+│   │   ├── RadioInput.tsx
+│   │   └── TextInput.tsx
+│   ├── Loader
+│   │   └── Loader.tsx
+│   ├── Modal
+│   │   └── Modal.tsx
+│   ├── Sidebar
+│   │   ├── Sidebar.tsx
+│   │   └── data.ts
+│   └── index.ts
+├── constants
+│   └── index.ts
+├── routes
+│   └── index.ts
+├── services
+│   ├── contactsSlice.ts
+│   ├── ModalSlice.ts
+│   └── store.ts
+├── utils
+│   └── index.ts
+├── view
+│   ├── ContactPage.tsx
+│   ├── GraphPage.tsx
+│   ├── Layout.tsx
+│   └── NotFound.tsx
+└── index.ts
 ```
+
+## 🙏🏻 Acknowledgments
+
+- **[Debraj Karmakar](https://www.linkedin.com/in/debrajkarmakar010/)** - Creator and maintainer of the project.
